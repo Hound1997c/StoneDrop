@@ -434,23 +434,7 @@ public class BlockBreakEventListener implements Listener {
         int random = Chance.randBetween(0, possibleInv.size()-1);
         return possibleInv.get(random);
     }
-
-
-    /*@EventHandler(priority = EventPriority.HIGHEST)
-    public void blockExplodeEvent(BlockExplodeEvent explosionBlockEvent){
-        if (PluginMain.dropFromOres && Chance.chance(PluginMain.oreDropChance)) return;
-        Material explosionMaterial = explosionBlockEvent.getBlock().getType();
-        if(explosionMaterial.toString().contains("ORE")){
-            if(PluginMain.dropOresWhiteList!=null &&
-                    PluginMain.dropOresWhiteList.contains(explosionMaterial)) {
-                return;
-            }
-            explosionBlockEvent.getBlock().setType(Material.DIRT);
-
-            explosionBlockEvent.setCancelled(true);
-        }
-    }*/
-
+    
 
     @EventHandler
     public void onEntityExplode(EntityExplodeEvent e) {
